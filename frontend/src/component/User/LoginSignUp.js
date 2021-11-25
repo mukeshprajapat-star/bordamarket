@@ -10,7 +10,6 @@ import {useAlert} from 'react-alert'
 import { clearErrors,login,register } from "../../actions/userAction";
 import ProfilePng from './Profile.png'
 import { Button } from 'primereact/button';
-import Paper from '@material-ui/core/Paper';
 import { InputText } from "primereact/inputtext";
 
 
