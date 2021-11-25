@@ -130,7 +130,7 @@ const ProductDetails = ({match}) => {
                             Descriptions:<p>{product.description}</p>
         
                         </div>
-                        <button className="submitReview" className="p-button-rounded" onClick={submitReviewToggle} className='submitReview'>Submit Reviews</button>
+                        <button onClick={submitReviewToggle}  className='submitReview'>Submit Reviews</button>
                     </div>
                 </div>
                 <h3 className="reviewsHeading">REVIEWS</h3>

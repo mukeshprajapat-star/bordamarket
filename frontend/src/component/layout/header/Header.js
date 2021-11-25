@@ -1,8 +1,6 @@
-import React ,{useState,Fragment}from 'react';
+import React from 'react';
 import { Menubar } from 'primereact/menubar';
-import { InputText } from 'primereact/inputtext';
 import logo from '../../../images/ecommerce.png'
-import {Button} from 'primereact/button';
 import "./Header.css"
 
 const Header = () => {
