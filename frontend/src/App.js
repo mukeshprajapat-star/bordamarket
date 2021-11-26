@@ -51,8 +51,6 @@ import NotFound from "./component/layout/NotFound/NotFound";
 //import "primereact/resources/themes/arya-orange/theme.css"
  
 
-
-
 function App() {
   const {isAuthenticated,user}=useSelector(state=>state.user);
   const [stripeApiKey,setStripeApiKey]=useState("");
