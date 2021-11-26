@@ -135,5 +135,18 @@
       margin: 0 0.5vmax;
       font: 300 1vmax "Roboto";
     }
+    .banner {
+      background-image: url("../../images/Hexagon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 85vmin;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color:black;
+    }
   }
   

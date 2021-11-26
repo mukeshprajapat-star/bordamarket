@@ -11,7 +11,7 @@ exports.registerUser=catchAsyncError(async(req,res,next) =>{
     const myCloud=await cloudinary.v2.uploader.upload(req.body.avatar,{
         folder:"avatars",
         width:150,
-        crop:'scale'
+        crop:'scale',
     });
 
     const {name,email,password}=req.body;
@@ -39,7 +39,7 @@ exports.loginUser=catchAsyncError(async (req,res,next)=>{
     if(!user){
         return next(new ErrorHandler("Invalid Email and Password",401));
     }
-    const isMatchedPassword=user.comparePassword(password);
+    const isMatchedPassword=await user.comparePassword(password);
     
     if(!isMatchedPassword){
         return next(new ErrorHandler("Invalid Email or Password",401));
