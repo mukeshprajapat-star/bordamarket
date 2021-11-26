@@ -21,9 +21,8 @@ exports.registerUser=catchAsyncError(async(req,res,next) =>{
         avatar:{
             public_id:myCloud.public_id,
             url:myCloud.secure_url
-        }
-        }
-    )
+        },
+    });
     sendToken(user,201,res);
 });
 //login
@@ -38,9 +37,9 @@ exports.loginUser=catchAsyncError(async (req,res,next)=>{
     if(!user){
         return next(new ErrorHandler("Invalid Email and Password",401));
     }
-    const isMatchedPassword=await user.comparePassword(password);
+    const isPasswordMatched=await user.comparePassword(password);
     
-    if(!isMatchedPassword){
+    if(!isPasswordMatched){
         return next(new ErrorHandler("Invalid Email or Password",401));
     }
     sendToken(user,200,res);
@@ -68,7 +67,10 @@ exports.forgetPassword=catchAsyncError(async(req,res,next)=>{
 
     await user.save({validateBeforeSave:false});
 
-    const resetPasswordUrl=`${req.protocol}://${req.get("host")}/password/reset/${resetToken}`;
+    const resetPasswordUrl=`${req.protocol}://${req.get(
+        "host"
+        )}/password/reset/${resetToken}`;
+
     const message=`Your Password Reset Token is:-\n\n${resetPasswordUrl} \n\n If you have not requested this email
     then, please ignore it `
     try{
@@ -128,6 +130,7 @@ exports.getUserDetails=catchAsyncError(async(req,res,next)=>{
 //Update user Password
 exports.updatePassword=catchAsyncError(async(req,res,next)=>{
     const user=await User.findById(req.user.id).select("+password");
+
     const isPasswordMatched=await user.comparePassword(req.body.oldPassword);
     if(!isPasswordMatched){
         return next(new ErrorHandler("Old Passowrd is Incorrect",400));
@@ -173,7 +176,7 @@ exports.updateProfile=catchAsyncError(async(req,res,next)=>{
         }
     };
 
-    await User.findByIdAndUpdate(req.user.id,newUserData,{
+    const user =await User.findByIdAndUpdate(req.user.id,newUserData,{
         new:true,
         runValidators:true,
         useFindAndModify:false

@@ -22,5 +22,5 @@ exports.authorizeRoles=(...roles)=>{
             )) 
         }
         next();
-    }
-}
+    };
+};
