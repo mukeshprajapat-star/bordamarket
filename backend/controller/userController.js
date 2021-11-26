@@ -13,9 +13,7 @@ exports.registerUser=catchAsyncError(async(req,res,next) =>{
         width:150,
         crop:'scale',
     });
-
     const {name,email,password}=req.body;
-    
     const user=await User.create({
         name,
         email,
@@ -36,6 +34,7 @@ exports.loginUser=catchAsyncError(async (req,res,next)=>{
         return  next(new ErrorHandler("Please Enter Your Email and Password",400));
     }
     const user=await User.findOne({email}).select("+password");
+
     if(!user){
         return next(new ErrorHandler("Invalid Email and Password",401));
     }
@@ -69,7 +68,7 @@ exports.forgetPassword=catchAsyncError(async(req,res,next)=>{
 
     await user.save({validateBeforeSave:false});
 
-    const resetPasswordUrl=`${req.protocol}://${req.get("host")}password/reset/${resetToken}`;
+    const resetPasswordUrl=`${req.protocol}://${req.get("host")}/password/reset/${resetToken}`;
     const message=`Your Password Reset Token is:-\n\n${resetPasswordUrl} \n\n If you have not requested this email
     then, please ignore it `
     try{
