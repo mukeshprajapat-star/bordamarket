@@ -5,8 +5,6 @@ mongoose
 .connect(process.env.DB_URL,{
     useNewUrlParser:true,
     useUnifiedTopology:true,
-    useFindAndModify:false,
-    useCreateIndex:true,
 })
 .then((data)=>{
     console.log(`mongo is connected with server ${data.connection.host}`);

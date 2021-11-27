@@ -139,7 +139,7 @@ const LoginSignUp = ({ history, location }) => {
                   />
                 </div>
                 <Link to="/password/forgot">Forgot Password ?</Link>
-                <Button style={{paddingLeft:" 9vmax"}} type="submit" value="Login" className="loginBtn" >Login</Button>
+                <Button style={{paddingLeft:" 9vmax"}} type="submit" label="Login" className="loginBtn" />
               </form>
              
       
@@ -192,7 +192,7 @@ const LoginSignUp = ({ history, location }) => {
                     onChange={registerDataChange}
                   />
                 </div>
-                <Button style={{paddingLeft:" 8vmax"}}  type="submit" value="Register" className="signUpBtn" >Register</Button>
+                <Button style={{paddingLeft:" 8vmax"}}  type="submit"  className="signUpBtn" label="Register"/>
               </form>
               
             </div>

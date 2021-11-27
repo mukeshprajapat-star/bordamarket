@@ -78,7 +78,7 @@ const ResetPassword = ({history,match}) => {
                     onChange={(e)=>setConfirmPassword(e.target.value)}
                   />
                 </div>
-                <Button type="submit"  style={{paddingLeft:" 8vmax"}}value='Update' className="resetPasswordBtn" >Update</Button>
+                <Button type="submit"  style={{paddingLeft:" 8vmax"}} label="Update" className="resetPasswordBtn" >Update</Button>
               </form>
               </div>
               </div>

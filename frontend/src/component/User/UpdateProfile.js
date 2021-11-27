@@ -111,7 +111,7 @@ const UpdateProfile = ({history}) => {
                     onChange={updateProfileDataChange}
                   />
                 </div>
-                <Button style={{paddingLeft:" 8.5vmax"}} type="submit" value='Update' className="updateProfileBtn" >Update</Button>
+                <Button style={{paddingLeft:" 8.5vmax"}} type="submit"  className="updateProfileBtn" >Update</Button>
               </form>
               </div>
               </div>
