@@ -13,7 +13,8 @@ exports.registerUser=catchAsyncError(async(req,res,next) =>{
         width:150,
         crop:'scale',
     });
-    const {name,email,password}=req.body;
+    const { name , email , password }=req.body;
+
     const user=await User.create({
         name,
         email,
@@ -32,6 +33,7 @@ exports.loginUser=catchAsyncError(async (req,res,next)=>{
     if(!email||!password){
         return  next(new ErrorHandler("Please Enter Your Email and Password",400));
     }
+
     const user=await User.findOne({email}).select("+password");
 
     if(!user){
@@ -144,16 +146,12 @@ exports.updatePassword=catchAsyncError(async(req,res,next)=>{
 
     sendToken(user,200,res);
 
-
     res.status(200).json({
         success:true,
         user
     });
 });
-
-
 //update user profile
-
 exports.updateProfile=catchAsyncError(async(req,res,next)=>{
     const newUserData={
         name:req.body.name,
@@ -183,7 +181,6 @@ exports.updateProfile=catchAsyncError(async(req,res,next)=>{
     });
     res.status(200).json({
         success:true,
-       
     })
 });
 // Get all user(admin) 
