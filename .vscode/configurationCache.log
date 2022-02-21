@@ -1,1 +1,0 @@
-{"buildTargets":["build-dev","build-local","build-production","copy-files","run-dev","run-local","run-production","ssh","stop"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

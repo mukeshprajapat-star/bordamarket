@@ -1,5 +1,5 @@
-bordamarket.com:443 {
-  tls sid.palas@gmail.com
+bhilwarabazar.com:443 {
+  tls mukeshprajapat7529@gmail.com
   root * /srv
   route {
     reverse_proxy /api* api-server:5000
