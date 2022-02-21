@@ -4,10 +4,10 @@
     padding: 0 8vmax;
     box-sizing: border-box;
     background-color: rgb(235, 235, 235);
-    position: fixed;
-    top: 0;
+    position:fixed;
+    top: 12;
     left: 0;
-    height: 100vh;
+    height: 88.5vh;
     display: flex;
     flex-direction: column;
   }
@@ -20,13 +20,16 @@
     color: rgb(126, 161, 255);
     transition: all 0.5s;
     background-color: rgb(204, 225, 248);
+    
   }
   
   .myOrdersTable {
     background-color: white;
+   
   }
   
   .myOrdersTable div {
+  
     font: 300 1vmax "Roboto";
     color: rgba(0, 0, 0, 0.678);
     border: none;
@@ -42,8 +45,9 @@
   }
   
   .MuiDataGrid-columnHeader {
-    background-color: tomato;
+    background-color: rgb(151, 199, 253);
     padding: 1vmax !important;
+    
   }
   
   .MuiDataGrid-columnHeader div {

@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 89vmin;
+    height: 88vmin;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -107,13 +107,12 @@
   
   .productCard > span {
     margin: 0.5vmax;
-    color: tomato;
+    color: rgb(252, 33, 33);
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 1vmax;
   }
   
   .productCard:hover {
-    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
     transform: translateY(-1vmax);
   }
   
@@ -140,7 +139,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 85vmin;
+      height: 75vmin;
       display: flex;
       flex-direction: column;
       text-align: center;

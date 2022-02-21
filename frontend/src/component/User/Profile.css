@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
-    top: 0%;
+    top: 12%;
     left: 0%;
     max-width: 100%;
     background-color: white;
@@ -26,8 +26,8 @@
   }
   
   .profileContainer > div:first-child > img {
-    width: 20vmax;
-    height: 20vmax;
+    width: 14vmax;
+    height: 14vmax;
     border-radius: 100%;
     transition: all 0.5s;
   }
@@ -60,7 +60,7 @@
   
   .profileContainer > div:last-child > div > p {
     color: rgba(0, 0, 0, 0.418);
-    font: 400 1vmax cursive;
+    font: 400 1vmax "Roboto";
     margin: 0.2vmax;
   }
   
@@ -150,7 +150,7 @@
     }
   
     .profileContainer > div:last-child > div > p {
-      font: 400 2vmax cursive;
+      font: 400 2vmax "Roboto";
       margin: 0.5vmax 0;
     }
   

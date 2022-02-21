@@ -24,7 +24,7 @@ const UserOptions = ({user}) => {
     const options=[
         {icon:<ListAltIcon/>,name:"Orders" ,func:orders},
         {icon:<PersonIcon/>,name:"Profile" ,func:account},
-        {icon:<ShoppingCartIcon style={{ color:cartItems.length>0 ? "tomato" :"unset"}}/>,name:`Cart( ${cartItems.length})` ,func:cart},
+        {icon:<ShoppingCartIcon style={{ color:cartItems.length>0 ? "red" :"unset"}}/>,name:`Cart( ${cartItems.length})` ,func:cart},
         {icon:<ExitTopAppIcon />,name:"Logout" ,func:logoutUser},
     ];
     if(user.role==="admin"){

@@ -1,8 +1,8 @@
 footer{
     margin-top: 10vmax;
     padding:2vmax;
-    background-color:rgb(34,33,33);
-    color:white;
+    background-color:#dce3ec;
+    color:black;
     display:flex;
     align-items:center;
 }
@@ -32,7 +32,7 @@ footer{
 .midFooter>h1{
     font-size:4vmax;
     font-family:"Roboto";
-    color:#eb4034;
+    color:#f83d3d;
 }
 .midFooter>p{
     max-width:60%;
@@ -55,10 +55,10 @@ footer{
     text-decoration:none;
     font-size:1.3vmax;
     font-family:"Gill sans","Gill sans Mt",'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:white;
+    color:black;
     transition:all 0.5s;
     margin:0.5vmax;
 }
 .rightFooter>a:hover{
-    color:#eb4034;
+    color:#f74134;
 }

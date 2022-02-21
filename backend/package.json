@@ -2,11 +2,11 @@
   "name": "mernstack",
   "version": "1.0.0",
   "description": "",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/server.js",
-    "dev": "nodemon backend/server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "mukesh",
@@ -23,7 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.11",
     "nodemailer": "^6.7.0",
-    "nodemon": "^2.0.13",
+    "nodemon": "^2.0.15",
     "stripe": "^8.186.1",
     "validator": "^13.6.0"
   }

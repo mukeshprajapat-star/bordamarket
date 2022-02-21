@@ -57,7 +57,7 @@ const ForgotPassword = () => {
                     onChange={(e)=>setEmail(e.target.value)}
                   />
                 </div>
-                <Button  style={{paddingLeft:" 8vmax"}} type="submit" label='Send' className="forgotPasswordBtn" />
+                <Button  style={{paddingLeft:"1vmax"}} type="submit" label='Send' className="forgotPasswordBtn" />
               </form>
               </div>
               </div>
